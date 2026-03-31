@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:33:08 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/03/31 19:18:33 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/03/31 20:25:27 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,17 @@ int Bureaucrat::getGrade() const
 	return(_grade);
 }
 
-const char* Bureaucrat::GradeTooHighException::what() const noexcept
+const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return("grade too high");
 }
 
-const char* Bureaucrat::GradeTooLowException::what() const noexcept
+const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return("grade too low");
 }
 
-const char* Bureaucrat::WrongNbr::what() const noexcept
+const char* Bureaucrat::WrongNbr::what() const throw()
 {
 	return("Nbr cannot be negative");
 }

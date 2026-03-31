@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:33:05 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/03/31 19:01:24 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/03/31 20:24:30 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,19 @@ public:
 	class GradeTooHighException : public std::exception
 	{
 	public:
-		const char*	what() const noexcept override;
+		const char*	what() const throw();
 	};
 	
 	class GradeTooLowException : public std::exception
 	{
 	public:
-		const char*	what() const noexcept override;
+		const char*	what() const throw();
 	};
 	
 	class WrongNbr : public std::exception
 	{
 	public:
-		const char* what() const noexcept override;
+		const char* what() const throw();
 	};
 };
 
