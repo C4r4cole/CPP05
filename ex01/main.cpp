@@ -6,11 +6,12 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:32:59 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/03/31 20:31:16 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/02 18:25:28 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int	main()
 {

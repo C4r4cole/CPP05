@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:33:08 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/03/31 20:25:27 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/02 18:23:10 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,4 +96,25 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)
 		<< bureaucrat.getGrade();
 
 	return (os);
+}
+
+void	Bureaucrat::signForm(Form &form)
+{
+	form.beSigned(*this);
+	
+	if (form.getIsSigned())
+	{
+		std::cout 	<< this
+					<< " signed "
+					<< form
+					<< std::endl;
+	}
+	else
+	{
+		std::cout	<< this
+					<< " couldn't sign "
+					<< form
+					<< " because grade required is too low"
+					<< std::endl;
+	}
 }
