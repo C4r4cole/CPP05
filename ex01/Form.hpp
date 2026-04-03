@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 14:51:52 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/02 17:30:55 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/03 14:28:03 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 # include <iostream>
 # include <string>
 # include <stdexcept>
-# include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {

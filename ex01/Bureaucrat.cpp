@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:33:08 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/02 18:23:10 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/03 15:18:13 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,27 +91,30 @@ void	Bureaucrat::decrementGrade(int nbr)
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)
 {
-	os	<< bureaucrat.getName()
+	os	<< GREEN
+		<< bureaucrat.getName()
 		<< ", bureaucrat grade "
-		<< bureaucrat.getGrade();
+		<< bureaucrat.getGrade()
+		<< RESET;
 
 	return (os);
 }
 
 void	Bureaucrat::signForm(Form &form)
 {
-	form.beSigned(*this);
-	
-	if (form.getIsSigned())
+	try
 	{
-		std::cout 	<< this
+		form.beSigned(*this);
+		
+		std::cout 	<< *this
 					<< " signed "
 					<< form
 					<< std::endl;
 	}
-	else
+	catch(const std::exception& e)
 	{
-		std::cout	<< this
+		std::cerr << e.what() << '\n';
+		std::cout	<< *this
 					<< " couldn't sign "
 					<< form
 					<< " because grade required is too low"

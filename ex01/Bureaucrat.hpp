@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:33:05 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/02 18:16:04 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/03 15:16:59 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <stdexcept>
 # include <string>
 # include "Form.hpp"
+
+#define RED     "\033[1;4;31m"
+#define GREEN   "\033[1;4;32m"
+#define RESET   "\033[0m"
 
 class Bureaucrat
 {

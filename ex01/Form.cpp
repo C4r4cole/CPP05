@@ -6,11 +6,12 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 14:51:48 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/02 17:36:10 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/03 15:17:35 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(std::string const &name, int const &gradeRequiredToSign, int const &gradeRequiredToExecute) : _name(name), _isSigned(false), _gradeRequiredToSign(gradeRequiredToSign), _gradeRequiredToExecute(gradeRequiredToExecute)
 {
@@ -35,6 +36,16 @@ Form::~Form()
 {
 }
 
+const char* Form::GradeTooHighException::what() const throw()
+{
+	return("grade too high");
+}
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+	return("grade too low");
+}
+
 std::string	Form::getName() const
 {
 	return (this->_name);
@@ -57,14 +68,18 @@ int	Form::getGradeRequiredToExecute() const
 
 std::ostream	&operator <<(std::ostream &oc, Form &src)
 {
-	oc	<< "Name: "
+	oc	<< RED
+		<< "Name: "
 		<< src.getName()
 		<< ", is signed: "
 		<< src.getIsSigned()
 		<< ", grade required to sign: "
 		<< src.getGradeRequiredToSign()
 		<< ", grade required to execute: "
-		<< src.getGradeRequiredToExecute();
+		<< src.getGradeRequiredToExecute()
+		<< RESET;
+	
+	return (oc);
 }
 
 void	Form::beSigned(Bureaucrat &src)
