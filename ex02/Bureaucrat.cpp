@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:33:08 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/03 15:18:13 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/06 17:44:11 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)
 	return (os);
 }
 
-void	Bureaucrat::signForm(Form &form)
+void	Bureaucrat::signForm(AForm &form)
 {
 	try
 	{

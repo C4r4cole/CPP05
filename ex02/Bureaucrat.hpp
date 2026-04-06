@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:33:05 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/03 15:16:59 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/06 17:41:55 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <stdexcept>
 # include <string>
-# include "Form.hpp"
+# include "AForm.hpp"
 
 #define RED     "\033[1;4;31m"
 #define GREEN   "\033[1;4;32m"
@@ -39,7 +39,7 @@ class Bureaucrat
 	void incrementGrade(int nbr);
 	void decrementGrade(int nbr);
 
-	void	signForm(Form &form);
+	void	signForm(AForm &form);
 
 	class GradeTooHighException : public std::exception
 	{
