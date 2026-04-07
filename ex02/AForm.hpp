@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 14:51:52 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/03 17:28:40 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/07 15:49:01 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define AFORM_HPP
 
 # include <iostream>
+# include <fstream>
 # include <string>
 # include <stdexcept>
 
