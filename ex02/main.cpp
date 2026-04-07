@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 14:32:59 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/07 16:31:32 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/07 18:02:22 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 #include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int	main()
 {
-	
+	srand(time(NULL));
 	try
 	{
 		for (int i = 0; i < 3; i++)
@@ -28,6 +29,7 @@ int	main()
 		Bureaucrat Coriolis("Coriolis", 24);
 		Bureaucrat Golgoth("Golgoth", 4);
 		ShrubberyCreationForm	Form01("sandForm");
+		RobotomyRequestForm		Form02("waterForm");
 		PresidentialPardonForm	Form03("windForm");
 		
 		std::cout << Sov << std::endl;
@@ -45,12 +47,14 @@ int	main()
 		
 		//   TEST SIGN FORM PERMISSION   //
 		Sov.signForm(Form01);
+		Golgoth.signForm(Form02);
 		Coriolis.signForm(Form03);
 
 		for (int i = 0; i < 3; i++)
 			std::cout << std::endl;
 
 		Form01.execute(Golgoth);
+		Form02.execute(Golgoth);
 		Form03.execute(Golgoth);
 	}
 	catch (std::exception & e)

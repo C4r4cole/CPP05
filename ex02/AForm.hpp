@@ -6,7 +6,7 @@
 /*   By: fmoulin <fmoulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 14:51:52 by fmoulin           #+#    #+#             */
-/*   Updated: 2026/04/07 15:49:01 by fmoulin          ###   ########.fr       */
+/*   Updated: 2026/04/07 17:51:26 by fmoulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <fstream>
 # include <string>
 # include <stdexcept>
+# include <cstdlib>
+# include <ctime>
 
 class Bureaucrat;
 
